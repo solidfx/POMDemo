@@ -1,0 +1,75 @@
+id: '16927417905170.5996200837654229'
+name: loadDboUmschlag
+nameConfigured: true
+steps:
+  - id: '16927418041800.22998130953635254'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: POM_test
+        valueType: custom
+        mustSelectFirst: true
+      - type: resourceId
+        value: dbo.Umschlag
+        valueType: custom
+        mustSelectFirst: true
+      - type: filters
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+        interpolationType: string
+      - type: additionalParams
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: false
+singleStep: false
+mode: manual
+modeConfigured: false
+parentPageId: '16917934204730.15547367989836447'
+folder: false
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadDboUmschlag.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadDboUmschlag.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadDboUmschlag.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: true
+index: 9
